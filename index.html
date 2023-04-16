@@ -2,7 +2,10 @@
 <html>
 <head>
 	
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel=
+	"stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 	
 	<title>quyetnguyen0188</title>
 	<style>
@@ -21,25 +24,31 @@
 			box-shadow: 0 2px 6px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,.08);
 			border-radius: 12px;
 			width: 90vw;
-			height: 80vh;
+			height: 90vh;
 			overflow: hidden;
 			display: flex;
 			flex-direction: column;
+			
+			scrollbar-width: none;
+			::-webkit-scrollbar
+			{ 
+			display: none; 
+			}
 		}
 		.window-header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			height: 36px;
+			height: 50px;
 			background-color: #f7f7f7;
 			border-bottom: 1px solid #ddd;
 			padding: 0 12px;
 		}
 		.window-header-title {
-			font-size: 24px;
+			font-size: 1.5vw;
 			font-weight: 600;
 			color: #333;
-			font-family: 'Space Mono', monospace;
+			font-family: 'Reem Kufi';
 		}
 		.window-buttons {
 			display: flex;
@@ -47,8 +56,8 @@
 		}
 		.window-button {
 			display: inline-block;
-			width: 12px;
-			height: 12px;
+			width: 15px;
+			height: 15px;
 			border-radius: 50%;
 			margin-right: 8px;
 			cursor: pointer;
@@ -67,26 +76,34 @@
 			flex: 1;
 			overflow: auto;
 		}
+		
+		h1 {
+			font-size: 2vw;
+			font-weight: bold;
+			font-family: 'Cabin';
+		}
+		
 		h2 {
 			font-size: 24px;
 			font-weight: bold;
-			padding-left: 10px;
+			font-family: 'Righteous';
+			
 		}
 		p {
 			margin: 10px 0;
-			padding-left: 10px;
+			font-family: 'Cabin';
 		}
 		
 		ul {
 			list-style: none;
 			padding: 0;
 			margin: 0;
-			padding-left: 10px;
 		}
 		
 		li {
 			display: inline-block;
 			margin-right: 10px;
+			font-family: 'Cabin';
 		}
 		
 		a {
@@ -107,26 +124,25 @@
 			</div>
 		</div>
 		<div class="window-body">
-			<h2>Myname</h2>
-			<p>Nguyen Ngoc Quyet</p>
+		
+		<div style="display: flex; justify-content: center; align-items: center; width: 150px; height: 150px; border-radius: 50%; overflow: hidden;">
+		<img src="path/to/image.jpg" alt="Avatar" style="width: 100%; height: auto;">
+		</div>
+		
+		
+			<h1 style="text-align: center">NGUYEN NGOC QUYET</h1>
+			<hr>
+
 	
-			<h2>Age</h2>
-			<p>21</p>
-	
-			<h2>Email</h2>
-			<p>Quyet.Nguyen.Official@gmail.com</p>
+			<h2 style="padding-left: 55vw;">Email</h2>
+			<p style="padding-left: 55vw;">quyet.nguyen.official@gmail.com</p>
 			
-			<h2>Contact with me</h2>
-			<ul>
-			<li><a href="https://www.facebook.com/Quyet.Nguyen.Official">Facebook</a></li>
-			<li><a href="https://zalo.me/NNQ_OFFICAL">Zalo</a></li>
-			</ul>
+			<h2 style="padding-left: 55vw;">Education</h2>
+			<p style="padding-left: 55vw;">Mechatronics Engineer at Hanoi University of Industry</p>
+			
+			
+			
 	
-			<h2>My job</h2>
-			<p>Student at Hanoi University of Industry</p>
-	
-			<h2>Học vấn:</h2>
-			<p>Đại học Khoa học Tự nhiên, chuyên ngành Công nghệ thông tin</p>
 		</div>
 	</div>
 </body>
