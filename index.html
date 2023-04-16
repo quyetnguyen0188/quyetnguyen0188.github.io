@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MacOS Window</title>
+	<style>
+		body {
+			background-color: #f1f1f1;
+			margin: 0;
+			padding: 0;
+		}
+		.window {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,.08);
+			border-radius: 12px;
+			width: 1100px;
+			height: 450px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+		}
+		.window-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 36px;
+			background-color: #f7f7f7;
+			border-bottom: 1px solid #ddd;
+			padding: 0 12px;
+		}
+		.window-header-title {
+			font-size: 14px;
+			font-weight: 600;
+			color: #333;
+		}
+		.window-buttons {
+			display: flex;
+			align-items: center;
+		}
+		.window-button {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			margin-right: 8px;
+			cursor: pointer;
+		}
+		.window-button.red {
+			background-color: #ff5f57;
+		}
+		.window-button.yellow {
+			background-color: #ffbd2e;
+		}
+		.window-button.green {
+			background-color: #28c940;
+		}
+		.window-body {
+			padding: 12px;
+			flex: 1;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="window">
+		<div class="window-header">
+			<div class="window-header-title">MacOS Window</div>
+			<div class="window-buttons">
+				<div class="window-button red"></div>
+				<div class="window-button yellow"></div>
+				<div class="window-button green"></div>
+			</div>
+		</div>
+		<div class="window-body">
+			<p>This is the body of the window.</p>
+		</div>
+	</div>
+</body>
+</html>
