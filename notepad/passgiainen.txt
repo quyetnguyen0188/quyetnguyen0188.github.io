@@ -1,0 +1,17 @@
+
+
+1. Mật khẩu giải nén mặc định là: nnq
+
+2. Nếu file có chứa [xyz] thì mật khẩu giải nén là: xyz
+
+3. Một số mật khẩu giải nén khác:
+
+  	- Solidworks 2022: slw2022nnq
+	- Solidworks 2020: slw2020nnqz
+	- Solidworks 2021: solid2021nnq
+	- Solidworks 2017: slw2017nnqzz
+	- Solidworks 2016: slw2017znnqz
+	- Solidworks 2015: slw2015nnq15
+	- Solidworks 2010: quyetdz
+	- Adobe Premiere Pro 2020: quyetdz
+
