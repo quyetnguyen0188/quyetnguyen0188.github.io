@@ -135,7 +135,27 @@
 </head>
 
 <body>
-	<p>Please wait, automatically redirecting in 5 seconds...</p>
+	
+<p id="countdown">Please wait, automatically redirecting in <span id="timer">5</span> seconds...</p>
+<script>
+    var countdownElement = document.getElementById('timer');
+    var countdown = 5; // Số giây cần đếm ngược
+
+    function startCountdown() {
+        countdownElement.textContent = countdown;
+        countdown--;
+
+        if (countdown < 0) {
+            // Thực hiện chuyển hướng sau khi đếm ngược kết thúc
+            window.location.href = "https://www.example.com";
+        } else {
+            setTimeout(startCountdown, 1000); // Đếm ngược mỗi giây (1000ms)
+        }
+    }
+
+    // Bắt đầu đếm ngược khi trang đã tải xong
+    window.onload = startCountdown;
+</script>
 	
 </body>
 </html>
