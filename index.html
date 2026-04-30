@@ -1,9 +1,284 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <meta http-equiv="refresh" content="0; URL=https://quyetnguyen0188.notion.site/quyetnguyen0188/NGUYEN-NGOC-QUYET-8167d613c0904e6b8383ba1d61199396">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang đã chuyển địa chỉ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #13131a;
+      --border: rgba(255,255,255,0.07);
+      --accent: #c9a96e;
+      --accent-glow: rgba(201,169,110,0.18);
+      --text: #f0ede8;
+      --muted: #7a7a8a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Ambient background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(201,169,110,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(100,80,180,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Noise grain */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    .card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 56px 52px 48px;
+      max-width: 520px;
+      width: calc(100% - 40px);
+      text-align: center;
+      animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.04),
+        0 32px 80px rgba(0,0,0,0.6),
+        0 0 60px var(--accent-glow);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Top decorative line */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      border-radius: 1px;
+    }
+
+    .icon-wrap {
+      width: 64px; height: 64px;
+      margin: 0 auto 28px;
+      background: linear-gradient(135deg, rgba(201,169,110,0.15), rgba(201,169,110,0.05));
+      border: 1px solid rgba(201,169,110,0.25);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,169,110,0.25); }
+      50%       { box-shadow: 0 0 0 12px rgba(201,169,110,0); }
+    }
+
+    .icon-wrap svg {
+      width: 28px; height: 28px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+      margin-bottom: 36px;
+    }
+
+    .new-url {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(201,169,110,0.08);
+      border: 1px solid rgba(201,169,110,0.2);
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .new-url:hover {
+      background: rgba(201,169,110,0.14);
+      border-color: rgba(201,169,110,0.4);
+    }
+
+    .new-url svg {
+      width: 14px; height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* Progress bar */
+    .progress-area {
+      margin-bottom: 20px;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .progress-track {
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, rgba(201,169,110,0.5), var(--accent));
+      width: 0%;
+      animation: fill 5s linear forwards;
+    }
+
+    @keyframes fill {
+      from { width: 0%; }
+      to   { width: 100%; }
+    }
+
+    .countdown {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .countdown span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #0a0a0f;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.15s;
+      letter-spacing: 0.02em;
+    }
+
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+  </style>
 </head>
 <body>
-    <!-- Nội dung trang web (nếu có) -->
+
+<div class="card">
+  <div class="icon-wrap">
+    <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </div>
+
+  <div class="label">Thông báo quan trọng</div>
+
+  <h1>Trang này đã chuyển địa chỉ</h1>
+
+  <p class="desc">
+    Portfolio của <strong>Nguyễn Ngọc Quyết</strong> hiện đã chuyển sang địa chỉ mới.
+    Vui lòng cập nhật bookmark của bạn.
+  </p>
+
+  <a href="https://nnq962.vercel.app/" class="new-url">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    nnq962.vercel.app
+  </a>
+
+  <div class="progress-area">
+    <div class="progress-meta">
+      <span>Đang chuyển hướng…</span>
+      <span id="pct">0%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="countdown">Tự động chuyển sau <span id="timer">5</span> giây</div>
+
+  <a href="https://nnq962.vercel.app/" class="btn">Đi ngay →</a>
+</div>
+
+<script>
+  const SECONDS = 5;
+  let remaining = SECONDS;
+
+  const timerEl = document.getElementById('timer');
+  const pctEl   = document.getElementById('pct');
+
+  const tick = setInterval(() => {
+    remaining--;
+    timerEl.textContent = remaining;
+    pctEl.textContent = Math.round(((SECONDS - remaining) / SECONDS) * 100) + '%';
+    if (remaining <= 0) {
+      clearInterval(tick);
+      window.location.href = 'https://nnq962.vercel.app/';
+    }
+  }, 1000);
+</script>
+
 </body>
 </html>
